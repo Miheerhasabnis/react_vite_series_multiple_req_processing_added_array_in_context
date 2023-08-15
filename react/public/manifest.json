@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "miheer is here",
+    "version": "1.0",
+    "permissions": [
+        "cookies","tabs","runtime"
+      ],
+      "host_permissions": [
+        "<all_urls>"
+      ],
+      "background": {
+        "service_worker": "background.js"
+      },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "externally_connectable": { 
+      "id": ["hhcocihaojimjilbfmjahpdiagdgcohl"], 
+      "matches": ["https://*.localhost:3000//*"]
+     },
+     "content_scripts": [
+      {
+        "matches": ["http://*/*"],
+        "js": ["contentscript.js"]
+      }
+    ]
+  }
+  
